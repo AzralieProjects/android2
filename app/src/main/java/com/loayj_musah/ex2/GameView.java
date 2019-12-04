@@ -18,6 +18,7 @@ public class GameView extends View {
     private Paddle Paddle;
     private float pitchRotation;
     private  Boolean game_start=false;
+    private BrickCollection brickCollection;
     public GameView(Context context,  AttributeSet attrs) {
 
         super(context, attrs);
@@ -46,6 +47,7 @@ public class GameView extends View {
         canvasH=h;
         ball=new Ball(canvasW/2,canvasH-95,40);
         Paddle=new Paddle(canvasW/2-canvasW/6,canvasH-50,canvasW/3,30);
+        brickCollection=new BrickCollection(canvasW,canvasH);
 
     }
 
@@ -63,5 +65,8 @@ public class GameView extends View {
         canvas.drawColor(Color.argb(255,110,107,107));
         ball.draw(canvas);
         Paddle.draw(canvas);
+        brickCollection.draw(canvas);
+        Log.d("d", "onDraw: ");
+
     }
 }
