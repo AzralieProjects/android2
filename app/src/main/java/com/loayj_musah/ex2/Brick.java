@@ -5,10 +5,6 @@ import android.graphics.RectF;
 public class Brick {
     private float x,y;
     private float w,h;
-    private int canvasH,canvasW;
-
-
-
     private RectF rect;
     public static boolean isVisible;
     private final int padding =2;
