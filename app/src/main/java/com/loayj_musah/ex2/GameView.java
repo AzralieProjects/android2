@@ -4,26 +4,36 @@ import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 
 
 
 public class GameView extends View {
-    private float pitchRotation;
+//    private float pitchRotation;
     private boolean GameStart=false;
     private int canvasW,canvasH;
     private Ball ball;
     private Paddle Paddle;
+    private float pitchRotation;
+    private  Boolean game_start=false;
     public GameView(Context context,  AttributeSet attrs) {
 
         super(context, attrs);
 
+
     }
 
     public void setPitchRotation(float Rotation){
-        this.pitchRotation=Rotation;
 
+            this.pitchRotation = (Rotation);
+//            this.Paddle.setX(Rotation);
+//            game_start=true;
+
+        Log.d("myTag", "This is my message"+this.pitchRotation);
+// this.Paddle.setX(this.pitchRotation);
+// invalidate();
     }
     public float getPitchRotation() {
         return pitchRotation;
