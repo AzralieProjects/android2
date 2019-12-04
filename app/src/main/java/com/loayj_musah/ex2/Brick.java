@@ -15,18 +15,17 @@ public class Brick {
 
 
 
-    public Brick(float x, float y, float w, float h,int canvasW,int canvasH) {
+    public Brick(float x, float y, float w, float h) {
         isVisible = true;
         this.x = x;
         this.y = y;
         this.w = w;
         this.h = h;
-        this.canvasH = canvasH;
-        this.canvasW = canvasW;
-        rect=new RectF(y*canvasW+padding,
-                       x+canvasH+padding,
-                      y*canvasW-padding,
-                    x+canvasH-padding);
+
+        rect=new RectF(y*w+padding,
+                       x*h+padding,
+                      y*w+w-padding,
+                    x*h+h-padding);
 
     }
     public RectF getRect() {

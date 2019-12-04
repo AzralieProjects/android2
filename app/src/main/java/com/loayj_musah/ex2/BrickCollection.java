@@ -10,19 +10,19 @@ public class BrickCollection {
     Paint paint;
     private int numOfBricks=0;
     ArrayList<Brick> bricks = new ArrayList<>();
-    private final int ROWS=5;
-    private final int COLS=7;
+    private final int ROWS=7;
+    private final int COLS=5;
     int Padding=2;
 
     public BrickCollection(int screenX, int screenY) {
 
         paint=new Paint();
-        float brickWidth = screenX-Padding*(COLS+1)/COLS;//screenx-padding(cols+1)/cols
+        float brickWidth = (screenX-Padding*(COLS+1))/COLS;//screenx-padding(cols+1)/cols
         float brickHeigh = screenY / 20;
-        for(int column = 0; column < COLS; column ++ ){
-            for(int row = 0; row < ROWS; row ++ ){
+        for(int column = 0; column < ROWS; column ++ ){
+            for(int row = 0; row < COLS; row ++ ){
                 numOfBricks++;
-                bricks.add(new Brick(row+1, column, brickWidth, brickHeigh,screenX,screenY));
+                bricks.add(new Brick(row+1, column, brickWidth, brickHeigh));
 
             }
         }
