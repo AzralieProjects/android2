@@ -19,7 +19,7 @@ public class BrickCollection {
         paint=new Paint();
         float brickWidth = (screenX)/ROWS;//screenx-padding(cols+1)/cols
         float brickHeigh = screenY / 20;
-<<<<<<< HEAD
+
         float leftx=0;
         float lefty=0;
 
@@ -28,12 +28,14 @@ public class BrickCollection {
             for(int row = 0; row < ROWS; row ++ ){
                 numOfBricks++;
                 bricks.add(new Brick(leftx, column, brickWidth, brickHeigh,screenX,screenY));
-=======
         for(int column = 0; column < ROWS; column ++ ){
             for(int row = 0; row < COLS; row ++ ){
                 numOfBricks++;
                 bricks.add(new Brick(row+1, column, brickWidth, brickHeigh));
->>>>>>> 0db4d9cda768712d78be06c4d95f7cd7d9d0ed06
+        for(int column = 0; column < ROWS; column ++ ){
+            for(int row = 0; row < COLS; row ++ ){
+                numOfBricks++;
+                bricks.add(new Brick(row+1, column, brickWidth, brickHeigh));
 
             }
         }
