@@ -17,7 +17,7 @@ public class BrickCollection {
     public BrickCollection(int screenX, int screenY) {
 
         paint=new Paint();
-        float brickWidth = (screenX-Padding*(COLS+1))/COLS;//screenx-padding(cols+1)/cols
+        float brickWidth = (screenX)/ROWS;//screenx-padding(cols+1)/cols
         float brickHeigh = screenY / 20;
         for(int column = 0; column < ROWS; column ++ ){
             for(int row = 0; row < COLS; row ++ ){
