@@ -61,6 +61,11 @@ public class Ball {
     canvas.drawCircle(cx,cy,radius,pen);
 
     }
+    public boolean check_ball_intersect_paddle(){
+
+
+        return true;
+    }
 
 
 }
