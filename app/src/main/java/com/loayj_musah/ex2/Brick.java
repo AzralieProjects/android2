@@ -15,7 +15,8 @@ public class Brick {
 
 
 
-    public Brick(float x, float y, float w, float h, int canvasH, int canvasW) {
+    public Brick(float x, float y, float w, float h,int canvasW,int canvasH) {
+        isVisible = true;
         this.x = x;
         this.y = y;
         this.w = w;
@@ -34,6 +35,11 @@ public class Brick {
     public static boolean isIsVisible() {
         return isVisible;
     }
+    public void setInvisible(){
+        isVisible = false;
+    }
+
+
 
     public static void setIsVisible(boolean isVisible) {
         Brick.isVisible = isVisible;
